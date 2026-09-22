@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고래잇 × 이마트 보물찾기 홍보 실행 기획서</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emartYellow: '#FFB81C',
+                        emartNavy: '#112A46',
+                        emartRed: '#E4002B',
+                        meatRed: '#C53030',
+                        vegGreen: '#2F855A',
+                        fishBlue: '#2B6CB0'
+                    },
+                    fontFamily: {
+                        sans: ['Pretendard', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Pretendard', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <header class="bg-emartNavy text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <span class="bg-emartYellow text-emartNavy font-black text-xs px-2.5 py-1 rounded-full uppercase tracking-wider">X-Collaboration</span>
+                <h1 class="text-xl md:text-2xl font-extrabold tracking-tight">고래잇 × 이마트 보물찾기 홍보 실행 기획서</h1>
+            </div>
+            <nav class="flex flex-wrap gap-2 text-sm font-semibold">
+                <button onclick="switchTab('overview')" class="tab-btn px-4 py-2 rounded-lg bg-emartYellow text-emartNavy transition shadow">전략 한눈에 보기</button>
+                <button onclick="switchTab('channels')" class="tab-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-200 hover:bg-slate-700 transition">채널별 집행계획</button>
+                <button onclick="switchTab('materials')" class="tab-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-200 hover:bg-slate-700 transition">홍보물 상세 (3종)</button>
+                <button onclick="switchTab('checklist')" class="tab-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-200 hover:bg-slate-700 transition">실행 체크리스트</button>
+                <button onclick="switchTab('kpi')" class="tab-btn px-4 py-2 rounded-lg bg-slate-800 text-slate-200 hover:bg-slate-700 transition">성과 측정 & KPI</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-8">
+
+        <!-- TAB 1: OVERVIEW -->
+        <section id="tab-overview" class="tab-content space-y-6">
+            <div class="bg-gradient-to-r from-emartNavy to-slate-900 text-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="space-y-4 max-w-2xl">
+                    <span class="bg-emartYellow text-emartNavy font-bold px-3 py-1 rounded-full text-xs">캠페인 핵심 목표</span>
+                    <h2 class="text-3xl font-extrabold leading-tight">지루한 장보기 동선을 <br><span class="text-emartYellow">‘식재료 탐험 보물찾기 게임’</span>으로 전환</h2>
+                    <p class="text-slate-300 text-sm md:text-base">매장 체류 시간 증대 및 구매 전환 극대화를 위한 다문화 가정 주부 & 미취학 아동 타깃 참여형 로컬 마케팅.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 text-center md:text-left space-y-2 w-full md:w-auto">
+                    <div class="text-xs text-emartYellow font-semibold uppercase tracking-wider">Core Target & Tone</div>
+                    <div class="text-base font-bold">메인: 다문화 가정 주부 / 4~7세 아동</div>
+                    <div class="text-sm text-slate-300">톤앤매너: Friendly · Dynamic · Adventurous</div>
+                </div>
+            </div>
+
+            <!-- Core Values Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-3">
+                    <div class="w-12 h-12 bg-emartYellow/20 text-yellow-700 rounded-xl flex items-center justify-center font-bold text-xl">🌐</div>
+                    <h3 class="text-lg font-bold text-slate-900">Accessibility (포용성)</h3>
+                    <p class="text-sm text-slate-600">픽토그램과 명확한 컬러 시스템을 적극 활용하여 한글 장벽을 완화하고 누구나 쉽게 참여 가능.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-3">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-xl flex items-center justify-center font-bold text-xl">🎮</div>
+                    <h3 class="text-lg font-bold text-slate-900">Gamification (게임화)</h3>
+                    <p class="text-sm text-slate-600">단순 쇼핑을 RPG 게임 속 퀘스트처럼 연출하여 아이와 부모 모두에게 즐거운 몰입감 제공.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-3">
+                    <div class="w-12 h-12 bg-green-100 text-green-700 rounded-xl flex items-center justify-center font-bold text-xl">🥗</div>
+                    <h3 class="text-lg font-bold text-slate-900">Utility (유용성)</h3>
+                    <p class="text-sm text-slate-600">주간 추천 레시피 제공 및 식재료 큐레이션으로 실질적인 저녁 식단 고민 해소.</p>
+                </div>
+            </div>
+
+            <!-- Principles & KPIs -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 border-b pb-2">🎯 홍보 운영 3원칙</h3>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">1</span><span>온라인에서 **'왜 참여하는지'** 매력적인 가치를 먼저 증명</span></li>
+                        <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">2</span><span>오프라인 매장 입구에서 **'어떻게 참여하는지' 3초 안에** 직관적 이해 유도</span></li>
+                        <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">3</span><span>참여 후 UGC 확산과 다음 주 차주 예고로 지속적 재방문 연결</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 border-b pb-2">📊 통합 핵심 KPI 목표</h3>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="text-2xl font-black text-emartRed">15만 회</div>
+                            <div class="text-xs text-slate-500 mt-1">온라인 카드뉴스 도달</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="text-2xl font-black text-emartRed">4.5%↑</div>
+                            <div class="text-xs text-slate-500 mt-1">카드뉴스 저장·공유율</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="text-2xl font-black text-blue-600">30만 회</div>
+                            <div class="text-xs text-slate-500 mt-1">숏폼 조회수</div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="text-2xl font-black text-green-600">90% / 65%</div>
+                            <div class="text-xs text-slate-500 mt-1">지도 소진율 / 미션 완료율</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: CHANNELS -->
+        <section id="tab-channels" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">채널별 집행 계획 및 메시지 흐름</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700">
+                                <th class="p-3 rounded-l-lg">채널 분류</th>
+                                <th class="p-3">매체 / 포맷</th>
+                                <th class="p-3">주요 타깃 및 접점</th>
+                                <th class="p-3">전달 핵심 메시지</th>
+                                <th class="p-3 rounded-r-lg">주요 KPI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-600">
+                            <tr>
+                                <td class="p-3 font-semibold text-slate-900">온라인 바이럴</td>
+                                <td class="p-3">인스타그램·페이스북 피드 (카드뉴스)</td>
+                                <td class="p-3">다문화 가정·육아맘, 맘카페 커뮤니티</td>
+                                <td class="p-3">아이와 함께 주말 장보기 고민 해결 + 한정판 굿즈 안내</td>
+                                <td class="p-3 font-bold text-emartRed">도달 15만 / 저장·공유 4.5%+</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-slate-900">숏폼 영상</td>
+                                <td class="p-3">유튜브 쇼츠, 인스타그램 릴스 (30~40초)</td>
+                                <td class="p-3">모바일 세대 및 가족 단위 방문객</td>
+                                <td class="p-3">마트 노잼? 5살도 클리어하는 보물찾기 퀘스트!</td>
+                                <td class="p-3 font-bold text-blue-600">조회 30만 / VTR 40%</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-slate-900">오프라인 매장</td>
+                                <td class="p-3">매장 입구 대형 포스터, 천장 행잉, A형 보드</td>
+                                <td class="p-3">매장 방문 고객 전체</td>
+                                <td class="p-3">1-2-3-4 단계로 즉시 이해하는 참여 방법</td>
+                                <td class="p-3 font-bold text-green-600">지도 소진 90% / 미션 완료 65%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Message Connect Flow -->
+            <div class="bg-emartNavy text-white p-6 rounded-2xl shadow-lg space-y-4">
+                <h4 class="font-bold text-emartYellow text-base uppercase tracking-wider">🔗 통합 메시지 연결 구조 (Customer Journey)</h4>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-center">
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/20">
+                        <div class="font-bold text-emartYellow">1단계</div>
+                        <div class="text-sm mt-1">온라인 노출</div>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/20">
+                        <div class="font-bold text-emartYellow">2단계</div>
+                        <div class="text-sm mt-1">매장 유입</div>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/20">
+                        <div class="font-bold text-emartYellow">3단계</div>
+                        <div class="text-sm mt-1">미션 참여</div>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/20">
+                        <div class="font-bold text-emartYellow">4단계</div>
+                        <div class="text-sm mt-1">리워드 & 공유</div>
+                    </div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/20 col-span-2 md:col-span-1">
+                        <div class="font-bold text-emartYellow">5단계</div>
+                        <div class="text-sm mt-1">차주 재방문</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: MATERIALS -->
+        <section id="tab-materials" class="tab-content hidden space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full">첨부 ①</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2">SNS 바이럴 6단 롱카드뉴스</h3>
+                        <p class="text-sm text-slate-600 mt-2">친근한 3D 캐릭터 스토리텔링(인스타툰 형식). 인스타그램 슬라이드 캐러셀 집행 및 영문/베트남어 캡션 지원으로 다문화 가정 접근성 극대화.</p>
+                        <div class="mt-4 p-3 bg-slate-50 rounded-xl text-xs space-y-1 text-slate-600">
+                            <div>• <b>스토리 플롯:</b> 인지 ➔ 획득 ➔ 탐색 ➔ 미션 ➔ 보상 ➔ 커밍순</div>
+                            <div>• <b>역할:</b> 프로모션 이해 및 재방문 기대감 형성</div>
+                        </div>
+                    </div>
+                    <button onclick="openModal('cardnews')" class="w-full bg-slate-900 text-white py-2.5 rounded-xl font-medium text-sm hover:bg-slate-800 transition">시안 상세 보기</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-1 rounded-full">첨부 ②</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2">매장 입구 메인 안내 포스터</h3>
+                        <p class="text-sm text-slate-600 mt-2">텍스트를 최소화하고 글로벌 공통 언어인 컬러와 픽토그램 중심으로 4단계 참여 프로세스 직관적 안내 (무빙워크, 안내데스크 집중 거치).</p>
+                        <div class="mt-4 p-3 bg-slate-50 rounded-xl text-xs space-y-1 text-slate-600">
+                            <div>• <b>4단계:</b> 지도 받기 ➔ 색깔 찾기 ➔ 식재료 쏙! ➔ 스탬프 찍기</div>
+                            <div>• <b>역할:</b> 입구 3초 이해 및 보물지도 수령 유도</div>
+                        </div>
+                    </div>
+                    <button onclick="openModal('poster')" class="w-full bg-slate-900 text-white py-2.5 rounded-xl font-medium text-sm hover:bg-slate-800 transition">시안 상세 보기</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-full">첨부 ③</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-2">유튜브 쇼츠 / 릴스 숏폼 영상</h3>
+                        <p class="text-sm text-slate-600 mt-2">RPG 게임 UI(퀘스트 창, HP/MP, 레이더 맵)를 결합한 1인칭 POV 인터랙티브 영상으로 모바일 세대 바이럴 유도.</p>
+                        <div class="mt-4 p-3 bg-slate-50 rounded-xl text-xs space-y-1 text-slate-600">
+                            <div>• <b>집행 매체:</b> 유튜브 쇼츠, 인스타그램 릴스, 틱톡 (30~40초)</div>
+                            <div>• <b>역할:</b> 퀘스트형 재미 영상 완청 및 주말 방문 CTA 자극</div>
+                        </div>
+                    </div>
+                    <button onclick="openModal('shorts')" class="w-full bg-slate-900 text-white py-2.5 rounded-xl font-medium text-sm hover:bg-slate-800 transition">시안 상세 보기 (60초 shorts)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: CHECKLIST -->
+        <section id="tab-checklist" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">오픈 시점 단계별 실행 체크리스트</h3>
+                <div class="space-y-4">
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <span class="bg-emartNavy text-white px-2.5 py-1 rounded text-xs font-bold">오픈 전 (D-14 ~ D-1)</span>
+                            <h4 class="font-bold text-slate-900 mt-2">오프라인 홍보물 사전 인쇄 및 매장 배포</h4>
+                            <p class="text-sm text-slate-600">A1 포스터 및 배너 100개 점포 사전 출고 / 천장 섹션 네비게이션(육류·채소·수산물) 컬러 일치 확인</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-lg border">담당: VMD팀</span>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <span class="bg-emartNavy text-white px-2.5 py-1 rounded text-xs font-bold">오픈 전 (D-3)</span>
+                            <h4 class="font-bold text-slate-900 mt-2">온라인 콘텐츠 사전 예약 발행 및 시딩</h4>
+                            <p class="text-sm text-slate-600">인스타그램·페이스북 카드뉴스 스케줄링 / 다문화 지원센터 및 지역 맘카페 사전 시딩 완료</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-lg border">담당: SNS 마케팅팀</span>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <span class="bg-emartNavy text-white px-2.5 py-1 rounded text-xs font-bold">오픈 당일 (D-Day)</span>
+                            <h4 class="font-bold text-slate-900 mt-2">숏폼 릴리즈 및 Meta 스폰서드 광고 부스팅</h4>
+                            <p class="text-sm text-slate-600">오전 10시 쇼츠·릴스 본편 릴리즈 / 인근 거주 부모 타깃 Meta 광고 활성화 및 현장 실시간 모니터링</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-lg border">담당: 디지털광고팀</span>
+                    </div>
+                    <div class="border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <span class="bg-emartNavy text-white px-2.5 py-1 rounded text-xs font-bold">오픈 후 (D+1 ~ 상시)</span>
+                            <h4 class="font-bold text-slate-900 mt-2">UGC 해시태그 챌린지 확산 및 정기 데이터 취합</h4>
+                            <p class="text-sm text-slate-600">#고래잇보물찾기 인증샷 이벤트, 우수 후기 리포스팅 및 차주 커밍순 기대평 이벤트 운영</p>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-lg border">담당: 전략기획/마케팅팀</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: KPI -->
+        <section id="tab-kpi" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">성과 측정 및 운영 개선 영역</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="font-bold text-slate-900">온라인 바이럴 분석</div>
+                        <p class="text-sm text-slate-600">도달수, 저장·공유율 주간 집계. 타깃 반응이 높은 소재 및 카피 집중 확산.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="font-bold text-slate-900">오프라인 참여 지표</div>
+                        <p class="text-sm text-slate-600">보물지도 소진율 및 스탬프 완료율 점포·요일별 기록을 통한 배포량 및 동선 조정.</p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="font-bold text-slate-900">구매 전환 및 객단가</div>
+                        <p class="text-sm text-slate-600">행사 전후 및 점포별 객단가 비교를 통한 레시피 및 식재료 큐레이션 지속 개선.</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-emartNavy to-slate-900 text-white p-6 rounded-2xl">
+                    <h4 class="font-bold text-emartYellow text-lg mb-3">🚀 캠페인 정량 목표 효과</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/20">
+                            <div class="text-3xl font-black text-emartYellow">+18.5%</div>
+                            <div class="text-sm text-slate-200 mt-1">방문 고객 객단가 상승</div>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/20">
+                            <div class="text-3xl font-black text-emartYellow">42분 ➔ 68분</div>
+                            <div class="text-sm text-slate-200 mt-1">가족 단위 평균 체류 시간</div>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/20">
+                            <div class="text-3xl font-black text-emartYellow">88% 이상</div>
+                            <div class="text-sm text-slate-200 mt-1">다문화 가족 만족도 긍정 응답</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Material Preview -->
+    <div id="materialModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div id="modalWrapper" class="bg-white rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 font-bold text-xl z-10">&times;</button>
+            <div id="modalContent" class="space-y-3">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-12 border-t border-slate-800">
+        <p>&copy; 2026 Goreat x Emart Treasure Hunt PR Execution Plan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Tab switching logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-emartYellow', 'text-emartNavy', 'shadow');
+                btn.classList.add('bg-slate-800', 'text-slate-200');
+            });
+            event.target.classList.remove('bg-slate-800', 'text-slate-200');
+            event.target.classList.add('bg-emartYellow', 'text-emartNavy', 'shadow');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        let shortsTimer = null;
+
+        // Modal content data for promotional assets
+        const modalData = {
+            cardnews: {
+                type: 'standard',
+                title: "첨부 ① 고래잇 보물찾기 카드뉴스 (SNS 바이럴)",
+                desc: "인스타그램 슬라이드 캐러셀 형식의 6단 롱카드뉴스입니다.",
+                details: [
+                    "<b>슬라이드 1:</b> 매장 방문 및 보물지도 수령 안내",
+                    "<b>슬라이드 2-3:</b> '소고기 불고기' 주간 퀘스트 코너 색상 매칭 탐색",
+                    "<b>슬라이드 4-5:</b> 미션 완료 후 첫 번째 스탬프 획득 및 리워드(키링·스티커) 소개",
+                    "<b>슬라이드 6:</b> 다음 주 메인 메뉴 궁금증을 유발하는 '커밍순' 예고"
+                ]
+            },
+            poster: {
+                type: 'standard',
+                title: "첨부 ② 이마트 매장 입구 메인 안내 포스터",
+                desc: "텍스트 최소화 및 픽토그램 중심의 직관적 4단계 참여 프로세스입니다.",
+                details: [
+                    "<b>1단계 (보물지도 받기):</b> 매장 입구 안내데스크에서 지도 챙기기",
+                    "<b>2단계 (색깔 찾기):</b> 지도 속 그림과 같은 코너(육류·채소·수산) 찾기",
+                    "<b>3단계 (보물 식재료 쏙!):</b> 원하는 식재료와 PB상품 장바구니에 담기",
+                    "<b>4단계 (스탬프 찍기):</b> 미션 완료 후 리워드 수령하기"
+                ]
+            },
+            shorts: {
+                type: 'shorts',
+                title: "첨부 ③ 유튜브 쇼츠 / 릴스 숏폼 영상 (shorts)",
+                desc: "9:16 세로형 인터랙티브 60초 쇼츠 시뮬레이션입니다."
+            }
+        };
+
+        function openModal(type) {
+            if (shortsTimer) clearInterval(shortsTimer);
+            const data = modalData[type];
+            const modalWrapper = document.getElementById('modalWrapper');
+            const contentDiv = document.getElementById('modalContent');
+
+            if (data.type === 'shorts') {
+                modalWrapper.classList.remove('max-w-lg');
+                modalWrapper.classList.add('max-w-sm');
+                
+                contentDiv.innerHTML = `
+                    <div class="text-center pb-2 border-b">
+                        <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-full">9:16 Shorts 시뮬레이션</span>
+                        <h3 class="text-base font-bold text-slate-900 mt-1">${data.title}</h3>
+                    </div>
+                    <!-- 9:16 Shorts Container -->
+                    <div id="shortsContainer" class="relative w-full bg-slate-900 rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between p-4 text-white border-4 border-slate-800" style="aspect-ratio: 9/16; max-height: 520px;">
+                        <!-- Top HUD -->
+                        <div class="flex justify-between items-center text-xs bg-black/40 p-2 rounded-xl backdrop-blur-sm">
+                            <div class="flex items-center space-x-1.5">
+                                <div class="w-6 h-6 rounded-full bg-emartYellow text-emartNavy font-bold flex items-center justify-center text-[10px]">P</div>
+                                <div><span class="text-emartYellow font-bold">Lv.12 Pui</span></div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-[10px] text-slate-300">HP <div class="inline-block w-12 h-1.5 bg-red-500 rounded-full"></div></div>
+                                <div id="shortsTimerDisplay" class="font-mono text-emartYellow font-bold text-xs mt-0.5">00:00 / 00:60</div>
+                            </div>
+                        </div>
+
+                        <!-- Center Animation Area -->
+                        <div class="my-auto text-center space-y-3 relative">
+                            <div class="absolute inset-0 bg-emartNavy/40 backdrop-blur-[2px] rounded-xl flex items-center justify-center p-3">
+                                <div id="shortsSceneText" class="space-y-2 animate-pulse">
+                                    <span class="bg-emartYellow text-emartNavy px-3 py-1 rounded-full text-xs font-black shadow">퀘스트 수락!</span>
+                                    <h4 class="text-sm font-extrabold text-white leading-snug">[주간 퀘스트: '불고기' 보물 재료 4개를 찾아라!]</h4>
+                                    <p class="text-[11px] text-slate-200">이마트 매장 입구 ➔ 카트 탑승 완료!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom UI & Progress Bar -->
+                        <div class="space-y-2 z-10">
+                            <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
+                                <div id="shortsProgressBar" class="bg-emartYellow h-full w-0 transition-all duration-300"></div>
+                            </div>
+                            <div class="flex justify-between items-center text-[10px] text-slate-300">
+                                <span id="shortsStepLabel">1단계: 지도 챙기기</span>
+                                <span class="bg-emartRed text-white px-2 py-0.5 rounded font-bold animate-bounce">▶ 재생중</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="replayShorts()" class="flex-1 bg-slate-900 text-white py-2 rounded-xl font-medium text-xs hover:bg-slate-800 transition">다시 재생</button>
+                        <button onclick="closeModal()" class="flex-1 bg-slate-200 text-slate-800 py-2 rounded-xl font-medium text-xs hover:bg-slate-300 transition">닫기</button>
+                    </div>
+                `;
+
+                startShortsSimulation();
+            } else {
+                modalWrapper.classList.remove('max-w-sm');
+                modalWrapper.classList.add('max-w-lg');
+                
+                contentDiv.innerHTML = `
+                    <span class="bg-emartYellow text-emartNavy text-xs font-bold px-2.5 py-1 rounded-full">시안 상세 개요</span>
+                    <h3 class="text-xl font-bold text-slate-900">${data.title}</h3>
+                    <p class="text-sm text-slate-600">${data.desc}</p>
+                    <div class="bg-slate-50 p-4 rounded-xl space-y-2 text-sm text-slate-700">
+                        ${data.details.map(d => `<div>• ${d}</div>`).join('')}
+                    </div>
+                `;
+            }
+            document.getElementById('materialModal').classList.remove('hidden');
+        }
+
+        function startShortsSimulation() {
+            let elapsed = 0;
+            const totalDuration = 60; // 60 seconds
+            const timerDisplay = document.getElementById('shortsTimerDisplay');
+            const progressBar = document.getElementById('shortsProgressBar');
+            const sceneText = document.getElementById('shortsSceneText');
+            const stepLabel = document.getElementById('shortsStepLabel');
+
+            shortsTimer = setInterval(() => {
+                elapsed += 1;
+                if (elapsed > totalDuration) {
+                    elapsed = totalDuration;
+                    clearInterval(shortsTimer);
+                }
+
+                // Format time
+                const secs = String(elapsed).padStart(2, '0');
+                timerDisplay.innerText = `00:${secs} / 00:60`;
+                progressBar.style.width = (elapsed / totalDuration * 100) + '%';
+
+                // Change scenes based on time
+                if (elapsed === 15) {
+                    sceneText.innerHTML = `
+                        <span class="bg-vegGreen text-white px-3 py-1 rounded-full text-xs font-black shadow">색깔 찾기 탐색!</span>
+                        <h4 class="text-sm font-extrabold text-white leading-snug">육류(빨강) & 채소(초록) 코너 질주 중!</h4>
+                        <p class="text-[11px] text-slate-200">아이와 함께 픽토그램 확인 완료 🎯</p>
+                    `;
+                    stepLabel.innerText = "2단계: 코너 색상 매칭";
+                } else if (elapsed === 30) {
+                    sceneText.innerHTML = `
+                        <span class="bg-fishBlue text-white px-3 py-1 rounded-full text-xs font-black shadow">보물 식재료 쏙!</span>
+                        <h4 class="text-sm font-extrabold text-white leading-snug">소고기 & 한우 불고기 재료 장바구니 담기</h4>
+                        <p class="text-[11px] text-slate-200">오늘 저녁 레시피 획득 성공 🛒</p>
+                    `;
+                    stepLabel.innerText = "3단계: 식재료 카트 투입";
+                } else if (elapsed === 45) {
+                    sceneText.innerHTML = `
+                        <span class="bg-emartRed text-white px-3 py-1 rounded-full text-xs font-black shadow">쾅! 첫 번째 스탬프!</span>
+                        <h4 class="text-sm font-extrabold text-white leading-snug">만세! 진짜 신난다! 리워드 획득!</h4>
+                        <p class="text-[11px] text-slate-200">한정판 키링 & 스티커 쿠폰 GET 🎁</p>
+                    `;
+                    stepLabel.innerText = "4단계: 스탬프 및 보상";
+                } else if (elapsed === 55) {
+                    sceneText.innerHTML = `
+                        <span class="bg-emartYellow text-emartNavy px-3 py-1 rounded-full text-xs font-black shadow">COMMING SOON</span>
+                        <h4 class="text-sm font-extrabold text-white leading-snug">다음 주 보물 메뉴는 과연 무엇일까요?</h4>
+                        <p class="text-[11px] text-slate-200">이번 주말 이마트에서 만나요! 👋</p>
+                    `;
+                    stepLabel.innerText = "마무리: 차주 예고 및 CTA";
+                }
+            }, 1000);
+        }
+
+        function replayShorts() {
+            if (shortsTimer) clearInterval(shortsTimer);
+            startShortsSimulation();
+        }
+
+        function closeModal() {
+            if (shortsTimer) clearInterval(shortsTimer);
+            document.getElementById('materialModal').classList.add('hidden');
+        }
+
+        // Initialize Lucide icons if loaded
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
