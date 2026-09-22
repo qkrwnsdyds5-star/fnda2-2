@@ -91,8 +91,8 @@
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-4">
                     <h3 class="text-lg font-bold text-slate-900 border-b pb-2">🎯 홍보 운영 3원칙</h3>
                     <ul class="space-y-3 text-sm text-slate-700">
-                        <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">1</span><span>온라인에서 **'왜 참여하는지'** 매력적인 가치를 먼저 증명</span></li>
-                        <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">2</span><span>오프라인 매장 입구에서 **'어떻게 참여하는지' 3초 안에** 직관적 이해 유도</span></li>
+                        <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">1</span><span>온라인에서 <b>'왜 참여하는지'</b> 매력적인 가치를 먼저 증명</span></li>
+                        <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">2</span><span>오프라인 매장 입구에서 <b>'어떻게 참여하는지' 3초 안에</b> 직관적 이해 유도</span></li>
                         <li class="flex items-start space-x-3"><span class="bg-emartNavy text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 text-xs font-bold">3</span><span>참여 후 UGC 확산과 다음 주 차주 예고로 지속적 재방문 연결</span></li>
                     </ul>
                 </div>
@@ -232,7 +232,7 @@
                             <div>• <b>역할:</b> 퀘스트형 재미 영상 완청 및 주말 방문 CTA 자극</div>
                         </div>
                     </div>
-                    <button onclick="openModal('shorts')" class="w-full bg-slate-900 text-white py-2.5 rounded-xl font-medium text-sm hover:bg-slate-800 transition">시안 상세 보기 (60초 shorts)</button>
+                    <button onclick="openModal('shorts')" class="w-full bg-slate-900 text-white py-2.5 rounded-xl font-medium text-sm hover:bg-slate-800 transition">시안 상세 보기 (60초 shorts.mp4)</button>
                 </div>
             </div>
         </section>
@@ -376,7 +376,7 @@
             },
             shorts: {
                 type: 'shorts',
-                title: "첨부 ③ 유튜브 쇼츠 / 릴스 숏폼 영상 (shorts)",
+                title: "첨부 ③ 유튜브 쇼츠 / 릴스 숏폼 영상 (shorts.mp4)",
                 desc: "9:16 세로형 인터랙티브 60초 쇼츠 시뮬레이션입니다."
             }
         };
@@ -393,13 +393,13 @@
                 
                 contentDiv.innerHTML = `
                     <div class="text-center pb-2 border-b">
-                        <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-full">9:16 Shorts 시뮬레이션</span>
+                        <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-full">9:16 Shorts (shorts.mp4) 플레이어</span>
                         <h3 class="text-base font-bold text-slate-900 mt-1">${data.title}</h3>
                     </div>
-                    <!-- 9:16 Shorts Container -->
+                    <!-- 9:16 Shorts Container with Video Simulation -->
                     <div id="shortsContainer" class="relative w-full bg-slate-900 rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between p-4 text-white border-4 border-slate-800" style="aspect-ratio: 9/16; max-height: 520px;">
                         <!-- Top HUD -->
-                        <div class="flex justify-between items-center text-xs bg-black/40 p-2 rounded-xl backdrop-blur-sm">
+                        <div class="flex justify-between items-center text-xs bg-black/40 p-2 rounded-xl backdrop-blur-sm z-10">
                             <div class="flex items-center space-x-1.5">
                                 <div class="w-6 h-6 rounded-full bg-emartYellow text-emartNavy font-bold flex items-center justify-center text-[10px]">P</div>
                                 <div><span class="text-emartYellow font-bold">Lv.12 Pui</span></div>
@@ -410,25 +410,24 @@
                             </div>
                         </div>
 
-                        <!-- Center Animation Area -->
-                        <div class="my-auto text-center space-y-3 relative">
-                            <div class="absolute inset-0 bg-emartNavy/40 backdrop-blur-[2px] rounded-xl flex items-center justify-center p-3">
-                                <div id="shortsSceneText" class="space-y-2 animate-pulse">
-                                    <span class="bg-emartYellow text-emartNavy px-3 py-1 rounded-full text-xs font-black shadow">퀘스트 수락!</span>
-                                    <h4 class="text-sm font-extrabold text-white leading-snug">[주간 퀘스트: '불고기' 보물 재료 4개를 찾아라!]</h4>
-                                    <p class="text-[11px] text-slate-200">이마트 매장 입구 ➔ 카트 탑승 완료!</p>
-                                </div>
+                        <!-- Center Animation Area / Visual Mock -->
+                        <div class="absolute inset-0 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center opacity-40 transition-all duration-700" id="shortsBgLayer" style="background: linear-gradient(to bottom, #112A46, #2F855A);"></div>
+                            <div class="relative z-10 text-center space-y-3 p-4">
+                                <div id="shortsSceneBadge" class="inline-block bg-emartYellow text-emartNavy px-3 py-1 rounded-full text-xs font-black shadow animate-pulse">퀘스트 수락!</div>
+                                <h4 id="shortsSceneTitle" class="text-sm font-extrabold text-white leading-snug drop-shadow-md">[주간 퀘스트: '불고기' 보물 재료 4개를 찾아라!]</h4>
+                                <p id="shortsSceneDesc" class="text-[11px] text-slate-200 drop-shadow">이마트 매장 입구 ➔ 카트 탑승 완료!</p>
                             </div>
                         </div>
 
                         <!-- Bottom UI & Progress Bar -->
-                        <div class="space-y-2 z-10">
+                        <div class="space-y-2 z-10 bg-black/50 p-2 rounded-xl backdrop-blur-sm">
                             <div class="w-full bg-slate-700 h-1.5 rounded-full overflow-hidden">
                                 <div id="shortsProgressBar" class="bg-emartYellow h-full w-0 transition-all duration-300"></div>
                             </div>
                             <div class="flex justify-between items-center text-[10px] text-slate-300">
-                                <span id="shortsStepLabel">1단계: 지도 챙기기</span>
-                                <span class="bg-emartRed text-white px-2 py-0.5 rounded font-bold animate-bounce">▶ 재생중</span>
+                                <span id="shortsStepLabel">00초: 퀘스트 수락</span>
+                                <span class="bg-emartRed text-white px-2 py-0.5 rounded font-bold animate-bounce">▶ 재생중 (shorts.mp4)</span>
                             </div>
                         </div>
                     </div>
@@ -460,7 +459,9 @@
             const totalDuration = 60; // 60 seconds
             const timerDisplay = document.getElementById('shortsTimerDisplay');
             const progressBar = document.getElementById('shortsProgressBar');
-            const sceneText = document.getElementById('shortsSceneText');
+            const sceneBadge = document.getElementById('shortsSceneBadge');
+            const sceneTitle = document.getElementById('shortsSceneTitle');
+            const sceneDesc = document.getElementById('shortsSceneDesc');
             const stepLabel = document.getElementById('shortsStepLabel');
 
             shortsTimer = setInterval(() => {
@@ -475,35 +476,37 @@
                 timerDisplay.innerText = `00:${secs} / 00:60`;
                 progressBar.style.width = (elapsed / totalDuration * 100) + '%';
 
-                // Change scenes based on time
-                if (elapsed === 15) {
-                    sceneText.innerHTML = `
-                        <span class="bg-vegGreen text-white px-3 py-1 rounded-full text-xs font-black shadow">색깔 찾기 탐색!</span>
-                        <h4 class="text-sm font-extrabold text-white leading-snug">육류(빨강) & 채소(초록) 코너 질주 중!</h4>
-                        <p class="text-[11px] text-slate-200">아이와 함께 픽토그램 확인 완료 🎯</p>
-                    `;
-                    stepLabel.innerText = "2단계: 코너 색상 매칭";
-                } else if (elapsed === 30) {
-                    sceneText.innerHTML = `
-                        <span class="bg-fishBlue text-white px-3 py-1 rounded-full text-xs font-black shadow">보물 식재료 쏙!</span>
-                        <h4 class="text-sm font-extrabold text-white leading-snug">소고기 & 한우 불고기 재료 장바구니 담기</h4>
-                        <p class="text-[11px] text-slate-200">오늘 저녁 레시피 획득 성공 🛒</p>
-                    `;
-                    stepLabel.innerText = "3단계: 식재료 카트 투입";
-                } else if (elapsed === 45) {
-                    sceneText.innerHTML = `
-                        <span class="bg-emartRed text-white px-3 py-1 rounded-full text-xs font-black shadow">쾅! 첫 번째 스탬프!</span>
-                        <h4 class="text-sm font-extrabold text-white leading-snug">만세! 진짜 신난다! 리워드 획득!</h4>
-                        <p class="text-[11px] text-slate-200">한정판 키링 & 스티커 쿠폰 GET 🎁</p>
-                    `;
-                    stepLabel.innerText = "4단계: 스탬프 및 보상";
-                } else if (elapsed === 55) {
-                    sceneText.innerHTML = `
-                        <span class="bg-emartYellow text-emartNavy px-3 py-1 rounded-full text-xs font-black shadow">COMMING SOON</span>
-                        <h4 class="text-sm font-extrabold text-white leading-snug">다음 주 보물 메뉴는 과연 무엇일까요?</h4>
-                        <p class="text-[11px] text-slate-200">이번 주말 이마트에서 만나요! 👋</p>
-                    `;
-                    stepLabel.innerText = "마무리: 차주 예고 및 CTA";
+                // Synchronize with shorts.mp4 flow timeline
+                if (elapsed >= 0 && elapsed < 12) {
+                    sceneBadge.className = "inline-block bg-emartYellow text-emartNavy px-3 py-1 rounded-full text-xs font-black shadow animate-pulse";
+                    sceneBadge.innerText = "퀘스트 수락!";
+                    sceneTitle.innerText = "[주간 퀘스트: '불고기' 보물 재료 4개를 찾아라!]";
+                    sceneDesc.innerText = "푸이와 함께 보물지도 펼치기 🗺️";
+                    stepLabel.innerText = "00-12초: 퀘스트 수락 및 지도 확인";
+                } else if (elapsed >= 12 && elapsed < 25) {
+                    sceneBadge.className = "inline-block bg-meatRed text-white px-3 py-1 rounded-full text-xs font-black shadow animate-pulse";
+                    sceneBadge.innerText = "색깔 찾기 탐색";
+                    sceneTitle.innerText = "[빨간색 구역 ➔ 소고기 획득 완료!]";
+                    sceneDesc.innerText = "빨간색을 따라가니까 금방 찾았다! 소고기 get!";
+                    stepLabel.innerText = "12-25초: 빨간색 육류 구역 탐색";
+                } else if (elapsed >= 25 && elapsed < 40) {
+                    sceneBadge.className = "inline-block bg-emartRed text-white px-3 py-1 rounded-full text-xs font-black shadow animate-pulse";
+                    sceneBadge.innerText = "[WARNING!] 위기 발생";
+                    sceneTitle.innerText = "엉뚱한 과자/젤리의 유혹 극복!";
+                    sceneDesc.innerText = "유혹 퇴치 성공! 야채 코너로 질주 🚀";
+                    stepLabel.innerText = "25-40초: 위기 상황 및 야채 코너 이동";
+                } else if (elapsed >= 40 && elapsed < 52) {
+                    sceneBadge.className = "inline-block bg-vegGreen text-white px-3 py-1 rounded-full text-xs font-black shadow animate-pulse";
+                    sceneBadge.innerText = "MISSION COMPLETE!";
+                    sceneTitle.innerText = "보물 상자 오픈 & 리워드 획득!";
+                    sceneDesc.innerText = "한정판 키링, 5천원 할인권, 음료수 GET 🎁";
+                    stepLabel.innerText = "40-52초: 미션 완료 및 보상 오픈";
+                } else if (elapsed >= 52) {
+                    sceneBadge.className = "inline-block bg-emartYellow text-emartNavy px-3 py-1 rounded-full text-xs font-black shadow animate-pulse";
+                    sceneBadge.innerText = "COMMING SOON";
+                    sceneTitle.innerText = "다음 주 보물 메뉴는 과연 무엇일까요?";
+                    sceneDesc.innerText = "아이도 신나고 할인도 받는 이마트 보물찾기!";
+                    stepLabel.innerText = "52-60초: 차주 예고 및 마무으리 CTA";
                 }
             }, 1000);
         }
