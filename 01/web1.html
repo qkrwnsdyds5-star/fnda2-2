@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고래잇 x 이마트 보물찾기 설문조사 허브</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .survey-card {
+            transition: all 0.25s ease;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+        }
+        .survey-card:hover {
+            transform: translateY(-3px);
+            border-color: #8b949e;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        .badge-repo {
+            background-color: rgba(56, 139, 253, 0.15);
+            color: #58a6ff;
+            border: 1px solid rgba(56, 139, 253, 0.4);
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col justify-between selection:bg-blue-500 selection:text-white">
+
+    <header class="border-b border-gray-800 bg-[#161b22] sticky top-0 z-50 px-4 py-3 sm:px-8">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="../index.html" class="bg-[#21262d] hover:bg-[#30363d] text-gray-200 text-xs font-medium px-3 py-2 rounded-md border border-[#30363d] transition flex items-center gap-1.5" title="홈으로 이동">
+                    <i class="fa-solid fa-house text-blue-400"></i>
+                    <span class="hidden sm:inline">홈</span>
+                </a>
+                <div class="h-4 w-[1px] bg-gray-700 hidden sm:block"></div>
+                <div class="flex items-center space-x-3">
+                    <div class="bg-blue-600 p-2 rounded-lg text-white shadow-md">
+                        <i class="fa-solid fa-compass text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-base sm:text-lg font-semibold text-white tracking-tight flex items-center gap-2">
+                            <span>qkrwnsdyds5-star</span>
+                            <span class="text-gray-500 font-normal">/</span>
+                            <span class="text-blue-400 font-bold">fnda2-2-surveys</span>
+                        </h1>
+                        <p class="text-xs text-gray-400 hidden sm:block">고래잇 x 이마트 보물찾기 공식 설문조사 아카이브</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="https://github.com/qkrwnsdyds5-star/fnda2-2" target="_blank" rel="noopener noreferrer" class="bg-[#21262d] hover:bg-[#30363d] text-gray-200 text-xs font-medium px-3 py-1.5 rounded-md border border-[#30363d] transition flex items-center gap-1.5">
+                    <i class="fa-brands fa-github text-sm"></i>
+                    <span>Repository</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-8 py-8">
+        
+        <!-- Repository Banner / Overview Section -->
+        <div class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 mb-8 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="badge-repo text-xs font-semibold px-2.5 py-0.5 rounded-full">Public Repository</span>
+                        <span class="text-xs text-gray-400"><i class="fa-solid fa-code-branch mr-1"></i> main branch</span>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-1">고래잇 × 이마트 보물찾기 설문조사 목록</h2>
+                    <p class="text-sm text-gray-400">참여 고객 만족도 조사 및 사전 수요조사 링크 모음 페이지입니다. 카드를 클릭하여 설문에 참여해 주세요.</p>
+                </div>
+                <div class="flex items-center gap-3 bg-[#0d1117] p-3 rounded-lg border border-[#30363d] self-start md:self-auto">
+                    <div class="text-center px-3 border-r border-[#30363d]">
+                        <div class="text-xs text-gray-400">총 설문</div>
+                        <div class="text-lg font-bold text-white">6개</div>
+                    </div>
+                    <div class="text-center px-3">
+                        <div class="text-xs text-gray-400">상태</div>
+                        <div class="text-sm font-semibold text-emerald-400 flex items-center justify-center gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 진행중
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search / Filter Bar -->
+        <div class="mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="relative w-full sm:w-80">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                    <i class="fa-solid fa-search text-xs"></i>
+                </span>
+                <input type="text" id="searchInput" onkeyup="filterSurveys()" placeholder="설문 제목 검색..." class="w-full bg-[#161b22] border border-[#30363d] rounded-lg pl-9 pr-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition">
+            </div>
+            <div class="text-xs text-gray-400 self-end sm:self-center">
+                <i class="fa-solid fa-info-circle mr-1 text-blue-400"></i> 클릭 시 구글폼이 새 창으로 열립니다.
+            </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div id="surveyGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <!-- Card 1 -->
+            <div class="survey-card rounded-xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSurvey('https://docs.google.com/forms/d/e/1FAIpQLSf9KAD8srZMhxJDkiP037oiS7t_nAU0NWQL1qzy55FypQDHBA/viewform')">
+                <div>
+                    <div class="flex items-start justify-between gap-2 mb-3">
+                        <span class="text-xs font-medium px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">만족도 및 피드백</span>
+                        <span class="text-xs text-gray-500 group-hover:text-blue-400 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-blue-400 transition mb-2">
+                        [고래잇 X 이마트 보물찾기] 참여 고객 만족도 및 피드백 설문조사
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">보물찾기 이벤트에 참여해주신 고객 여러분의 소중한 피드백과 만족도를 수집합니다.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-[#30363d] flex items-center justify-between text-xs text-gray-400">
+                    <span class="flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-blue-400"></i> Google Forms</span>
+                    <span class="text-blue-400 font-medium group-hover:underline">설문 참여하기 &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="survey-card rounded-xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSurvey('https://docs.google.com/forms/d/e/1FAIpQLScQCR75vg1XItA9z5Cjn8rR_dAAVuFAJNq6Y-rkOYdYnRZfDg/viewform')">
+                <div>
+                    <div class="flex items-start justify-between gap-2 mb-3">
+                        <span class="text-xs font-medium px-2 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">다국어 사전</span>
+                        <span class="text-xs text-gray-500 group-hover:text-purple-400 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-purple-400 transition mb-2">
+                        고래잇 x 이마트 보물찾기 다국어 사전 수요조사
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">글로벌 참여객들을 위한 다국어 사전 서비스 도입을 위한 사전 수요를 조사합니다.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-[#30363d] flex items-center justify-between text-xs text-gray-400">
+                    <span class="flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-purple-400"></i> Google Forms</span>
+                    <span class="text-purple-400 font-medium group-hover:underline">설문 참여하기 &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="survey-card rounded-xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSurvey('https://docs.google.com/forms/d/e/1FAIpQLSe96FTlaGkrRXYBWgg9JhgGmFTrs2_hHQJL13tV2AiJbjBNzQ/viewform')">
+                <div>
+                    <div class="flex items-start justify-between gap-2 mb-3">
+                        <span class="text-xs font-medium px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">사전 수요조사</span>
+                        <span class="text-xs text-gray-500 group-hover:text-emerald-400 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-emerald-400 transition mb-2">
+                        [고래잇 × 이마트] 보물찾기 이벤트 사전 수요조사
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">본격적인 보물찾기 이벤트 개최 전, 참여 의향과 선호도를 파악하기 위한 조사입니다.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-[#30363d] flex items-center justify-between text-xs text-gray-400">
+                    <span class="flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-emerald-400"></i> Google Forms</span>
+                    <span class="text-emerald-400 font-medium group-hover:underline">설문 참여하기 &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="survey-card rounded-xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSurvey('https://docs.google.com/forms/d/e/1FAIpQLSeb8Ho0s9cRGlp5TnI9tiPwKN_XSCXA4cUlbJ-Yu9IFYvpreg/viewform')">
+                <div>
+                    <div class="flex items-start justify-between gap-2 mb-3">
+                        <span class="text-xs font-medium px-2 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">이벤트 만족도</span>
+                        <span class="text-xs text-gray-500 group-hover:text-amber-400 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-amber-400 transition mb-2">
+                        [고래잇 x 이마트] 보물찾기 이벤트 만족도 조사
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">이벤트 종료 후 진행되는 전반적인 프로그램 만족도 및 개선사항 조사입니다.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-[#30363d] flex items-center justify-between text-xs text-gray-400">
+                    <span class="flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-amber-400"></i> Google Forms</span>
+                    <span class="text-amber-400 font-medium group-hover:underline">설문 참여하기 &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="survey-card rounded-xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSurvey('https://docs.google.com/forms/d/e/1FAIpQLScxbb3eofXfCp7mOb7P32C6lvx6tWvfGnntjpA4oIFL3EXE1w/viewform')">
+                <div>
+                    <div class="flex items-start justify-between gap-2 mb-3">
+                        <span class="text-xs font-medium px-2 py-1 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">주말 장보기</span>
+                        <span class="text-xs text-gray-500 group-hover:text-rose-400 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-rose-400 transition mb-2">
+                        [고래잇] 주말 장보기 보물찾기 이벤트 사전 수요조사
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">주말 장보기 고객들을 대상으로 기획된 보물찾기 프로그램 사전 수요 조사입니다.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-[#30363d] flex items-center justify-between text-xs text-gray-400">
+                    <span class="flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-rose-400"></i> Google Forms</span>
+                    <span class="text-rose-400 font-medium group-hover:underline">설문 참여하기 &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="survey-card rounded-xl p-5 flex flex-col justify-between cursor-pointer group" onclick="openSurvey('https://docs.google.com/forms/d/e/1FAIpQLSfDaQ9e8pocPdhdACR82fbPt__NDaYyFE0fSvJJq_TsAEddWw/viewform')">
+                <div>
+                    <div class="flex items-start justify-between gap-2 mb-3">
+                        <span class="text-xs font-medium px-2 py-1 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">가족 참여</span>
+                        <span class="text-xs text-gray-500 group-hover:text-teal-400 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-teal-400 transition mb-2">
+                        [사전 설문] 아이와 함께하는 이마트 보물찾기 대작전!!! 야~호
+                    </h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">아이와 함께 방문하는 가족 단위 고객들을 위한 특별 보물찾기 대작전 사전 설문입니다.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-[#30363d] flex items-center justify-between text-xs text-gray-400">
+                    <span class="flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-teal-400"></i> Google Forms</span>
+                    <span class="text-teal-400 font-medium group-hover:underline">설문 참여하기 &rarr;</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="border-t border-gray-800 bg-[#161b22] py-6 px-4 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div>&copy; 2026 qkrwnsdyds5-star / fnda2-2. All rights reserved.</div>
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-shield-halved mr-1"></i> Secure Form Links</span>
+                <span><i class="fa-solid fa-globe mr-1"></i> KR / UTF-8</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open survey in a new tab securely
+        function openSurvey(url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        // Live filter for cards
+        function filterSurveys() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let grid = document.getElementById('surveyGrid');
+            let cards = grid.getElementsByClassName('survey-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                let desc = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+                
+                if (title.indexOf(input) > -1 || desc.indexOf(input) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
