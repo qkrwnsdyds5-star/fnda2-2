@@ -90,6 +90,9 @@
                 <button onclick="switchTab('materials')" id="btn-materials" class="px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">홍보물 3종 상세</button>
                 <button onclick="switchTab('checklist')" id="btn-checklist" class="px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">실행 체크리스트</button>
                 <button onclick="switchTab('kpi')" id="btn-kpi" class="px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">성과 측정 & 목표</button>
+                <a href="01/web1.html" id="btn-survey" class="px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-emartYellow text-emartNavy hover:bg-amber-400 shadow flex items-center gap-1.5">
+                    <span>📋 설문조사 참여</span>
+                </a>
             </div>
 
             <!-- Tab 1: Channels -->
@@ -143,17 +146,17 @@
                 </div>
             </div>
 
-            <!-- Tab 2: Materials (Updated with cardnews.png, poster.png, shorts.mp4) -->
+            <!-- Tab 2: Materials (Corrected Ratios: Card News 4:3, Poster 1:√2, Shorts 9:16) -->
             <div id="tab-materials" class="tab-content hidden grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Material 1: Card News -->
+                <!-- Material 1: Card News (4:3 Ratio Container) -->
                 <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-4 flex flex-col justify-between">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
-                            <span class="bg-emartYellow/20 text-emartNavy px-3 py-1.5 rounded-xl font-bold text-xs inline-block">홍보물 ① 카드뉴스</span>
+                            <span class="bg-emartYellow/20 text-emartNavy px-3 py-1.5 rounded-xl font-bold text-xs inline-block">홍보물 ① 카드뉴스 (4:3)</span>
                             <span class="text-[11px] text-slate-400 font-medium">cardnews.png</span>
                         </div>
-                        <div class="rounded-xl overflow-hidden bg-slate-100 border border-slate-200 h-64 flex items-center justify-center relative group cursor-pointer" onclick="openMediaModal('image', 'cardnews.png', 'SNS 바이럴용 6단 롱카드뉴스')">
-                            <img src="cardnews.png" alt="카드뉴스 시안" class="w-full h-full object-cover group-hover:scale-105 transition-smooth" onerror="this.src='https://placehold.co/400x600/112A46/FFB81C?text=cardnews.png+Missing';">
+                        <div class="rounded-xl overflow-hidden bg-slate-100 border border-slate-200 w-full aspect-[4/3] flex items-center justify-center relative group cursor-pointer shadow-inner" onclick="openMediaModal('image', 'cardnews.png', 'SNS 바이럴용 6단 롱카드뉴스')">
+                            <img src="cardnews.png" alt="카드뉴스 시안" class="w-full h-full object-cover group-hover:scale-105 transition-smooth" onerror="this.src='https://placehold.co/800x600/112A46/FFB81C?text=cardnews.png+4:3+Missing';">
                             <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-smooth flex items-center justify-center text-white text-xs font-bold">🔍 크게 보기</div>
                         </div>
                         <h3 class="text-lg font-bold">인스타툰 형식 6단 롱카드뉴스</h3>
@@ -164,15 +167,15 @@
                     </div>
                 </div>
 
-                <!-- Material 2: Poster -->
+                <!-- Material 2: Poster (1:√2 Ratio Container ≈ 1:1.414) -->
                 <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-4 flex flex-col justify-between">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
-                            <span class="bg-emartYellow/20 text-emartNavy px-3 py-1.5 rounded-xl font-bold text-xs inline-block">홍보물 ② 포스터</span>
+                            <span class="bg-emartYellow/20 text-emartNavy px-3 py-1.5 rounded-xl font-bold text-xs inline-block">홍보물 ② 포스터 (1:√2)</span>
                             <span class="text-[11px] text-slate-400 font-medium">poster.png</span>
                         </div>
-                        <div class="rounded-xl overflow-hidden bg-slate-100 border border-slate-200 h-64 flex items-center justify-center relative group cursor-pointer" onclick="openMediaModal('image', 'poster.png', '이마트 매장 입구 메인 안내 포스터')">
-                            <img src="poster.png" alt="포스터 시안" class="w-full h-full object-cover group-hover:scale-105 transition-smooth" onerror="this.src='https://placehold.co/400x600/FFB81C/112A46?text=poster.png+Missing';">
+                        <div class="rounded-xl overflow-hidden bg-slate-100 border border-slate-200 w-full max-w-[280px] mx-auto aspect-[1/1.414] flex items-center justify-center relative group cursor-pointer shadow-inner" onclick="openMediaModal('image', 'poster.png', '이마트 매장 입구 메인 안내 포스터')">
+                            <img src="poster.png" alt="포스터 시안" class="w-full h-full object-cover group-hover:scale-105 transition-smooth" onerror="this.src='https://placehold.co/600x848/FFB81C/112A46?text=poster.png+1:√2+Missing';">
                             <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-smooth flex items-center justify-center text-white text-xs font-bold">🔍 크게 보기</div>
                         </div>
                         <h3 class="text-lg font-bold">매장 입구 3초 룰 안내 포스터</h3>
@@ -183,15 +186,15 @@
                     </div>
                 </div>
 
-                <!-- Material 3: Shorts Video -->
+                <!-- Material 3: Shorts Video (9:16 Ratio Container) -->
                 <div class="bg-white rounded-2xl p-6 card-shadow border border-slate-100 space-y-4 flex flex-col justify-between">
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
-                            <span class="bg-emartYellow/20 text-emartNavy px-3 py-1.5 rounded-xl font-bold text-xs inline-block">홍보물 ③ 숏폼 영상</span>
+                            <span class="bg-emartYellow/20 text-emartNavy px-3 py-1.5 rounded-xl font-bold text-xs inline-block">홍보물 ③ 숏폼 영상 (9:16)</span>
                             <span class="text-[11px] text-slate-400 font-medium">shorts.mp4</span>
                         </div>
-                        <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 h-64 flex items-center justify-center relative group">
-                            <video src="shorts.mp4" controls class="w-full h-full object-cover" poster="https://placehold.co/400x600/112A46/FFB81C?text=shorts.mp4+Preview"></video>
+                        <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 w-full max-w-[240px] mx-auto aspect-[9/16] flex items-center justify-center relative group shadow-inner">
+                            <video src="shorts.mp4" controls class="w-full h-full object-cover" poster="https://placehold.co/450x800/112A46/FFB81C?text=shorts.mp4+9:16"></video>
                         </div>
                         <h3 class="text-lg font-bold">모바일 RPG UI 인터랙티브 숏폼</h3>
                         <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
@@ -265,56 +268,6 @@
             </div>
         </section>
 
-        <!-- Interactive RPG Simulator Preview Section -->
-        <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-slate-100 space-y-6">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <span class="bg-emartYellow/20 text-emartNavy text-xs font-bold px-3 py-1 rounded-full">모바일 숏폼 미리보기 시뮬레이터</span>
-                    <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 mt-1">이마트 보물찾기 퀘스트 인터랙션 체험</h3>
-                </div>
-                <button onclick="triggerQuest()" class="bg-emartYellow hover:bg-amber-400 text-emartNavy font-bold px-5 py-3 rounded-xl shadow transition-smooth flex items-center justify-center space-x-2">
-                    <span>⚔️ 주간 퀘스트 수락하기</span>
-                </button>
-            </div>
-
-            <!-- Simulated Phone Screen -->
-            <div class="max-w-md mx-auto bg-slate-900 rounded-3xl p-4 shadow-2xl border-4 border-slate-800 relative overflow-hidden">
-                <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-4 bg-black rounded-full z-20"></div>
-                <!-- Game UI Overlay -->
-                <div class="bg-slate-800 rounded-2xl p-4 text-white relative min-h-[380px] flex flex-col justify-between overflow-hidden">
-                    <!-- Background Illustration Simulation -->
-                    <div class="absolute inset-0 opacity-25 bg-cover bg-center" style="background-image: url('https://placehold.co/400x600/112A46/FFB81C?text=Emart+Store+Quest+Map');"></div>
-                    
-                    <!-- Top Status Bar -->
-                    <div class="relative z-10 flex justify-between items-center text-xs font-bold">
-                        <div class="bg-black/50 px-3 py-1 rounded-full border border-emartYellow/40 text-emartYellow">Lv.12 Pui</div>
-                        <div class="space-y-1 w-28">
-                            <div class="flex justify-between text-[10px]"><span>HP</span><span>100%</span></div>
-                            <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden"><div class="bg-emerald-500 h-full w-full"></div></div>
-                        </div>
-                    </div>
-
-                    <!-- Center Quest Popup Banner -->
-                    <div id="quest-banner" class="relative z-10 my-auto bg-amber-500/90 backdrop-blur-md text-emartNavy p-4 rounded-2xl border-2 border-emartYellow text-center shadow-xl transform transition-smooth scale-100">
-                        <span class="text-xs font-extrabold tracking-widest uppercase bg-white/30 px-2 py-0.5 rounded">WEEKLY QUEST</span>
-                        <h4 class="text-lg font-extrabold mt-1">'[불고기] 보물 재료 4개를 찾아라!'</h4>
-                        <p class="text-xs mt-1 font-medium text-slate-900">소고기, 양파, 대파, 당근 코너로 이동하세요!</p>
-                    </div>
-
-                    <!-- Bottom Action Controls -->
-                    <div class="relative z-10 flex justify-between items-center pt-4 border-t border-white/10">
-                        <div class="text-xs text-slate-300">
-                            <p class="font-bold text-emartYellow">진행 중: 재료 (0/4)</p>
-                            <p class="text-[10px] text-slate-400">이마트 매장 입구 지도 수령 완료</p>
-                        </div>
-                        <div class="bg-emartYellow text-emartNavy px-4 py-2 rounded-xl text-xs font-extrabold shadow animate-pulse">
-                            탐색 시작 ➔
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <!-- Media Preview Modal -->
@@ -349,28 +302,17 @@
             const buttons = ['channels', 'materials', 'checklist', 'kpi'];
             buttons.forEach(id => {
                 const btn = document.getElementById('btn-' + id);
-                btn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-white text-slate-600 hover:bg-slate-100 border border-slate-200";
+                if (btn) {
+                    btn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-white text-slate-600 hover:bg-slate-100 border border-slate-200";
+                }
             });
 
             // Activate selected tab & button
             document.getElementById('tab-' + tabId).classList.remove('hidden');
             const activeBtn = document.getElementById('btn-' + tabId);
-            activeBtn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-emartNavy text-white shadow";
-        }
-
-        function triggerQuest() {
-            const banner = document.getElementById('quest-banner');
-            banner.classList.add('scale-105', 'bg-emartYellow');
-            setTimeout(() => {
-                banner.classList.remove('scale-105', 'bg-emartYellow');
-            }, 300);
-            
-            // Custom friendly notification instead of alert()
-            const notif = document.createElement('div');
-            notif.className = 'fixed bottom-5 right-5 z-50 bg-emartNavy text-white px-6 py-3 rounded-2xl shadow-2xl border border-emartYellow animate-bounce text-sm font-bold';
-            notif.innerText = '⚔️ 퀘스트 수락 완료! 이마트 매장 입구에서 보물지도를 수령하세요.';
-            document.body.appendChild(notif);
-            setTimeout(() => notif.remove(), 3500);
+            if (activeBtn) {
+                activeBtn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-smooth bg-emartNavy text-white shadow";
+            }
         }
 
         function openMediaModal(type, src, title) {
